@@ -73,6 +73,8 @@ with GestureRecognizer.create_from_options(options) as recognizer:
                         print(f'Hand {i + 1}:')
                         print(f'  Handedness: {handedness[0].category_name}')
                         for g in gesture:
+                            if g.category_name == "ILoveYou" :
+                                g.category_name = "Rock"
                             print(f'  Gesture: {g.category_name} ({g.score:.2f})')
                         print()
 
