@@ -43,7 +43,7 @@ def print_result(result: GestureRecognizerResult, output_image: mp.Image, timest
     jpg_as_text = base64.b64encode(buffer).decode('utf-8')
 
     # Emit the results to the client
-    socketio.emit('gesture_result', {'image': jpg_as_text, 'results': results})
+    socketio.emit('SignIX', {'image': jpg_as_text, 'results': results})
 
 # Set up the gesture recognizer options
 options = GestureRecognizerOptions(
