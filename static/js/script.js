@@ -10,12 +10,16 @@ function displayResults(data) {
     // Display the gesture results
     const resultsElement = document.getElementById('results');
     let resultsHTML = '';
-    data.results.forEach((result, index) => {
-        resultsHTML += `<p>Hand ${index + 1}: ${result.handedness}</p>`;
-        result.gestures.forEach(gesture => {
-            resultsHTML += `<p>Gesture: ${gesture.gesture} (Score: ${gesture.score.toFixed(2)})</p>`;
+    if(data.results.length === 0 ){
+        resultsHTML =`<p>No hands found</p>`
+    }else{
+        data.results.forEach((result, index) => {
+            resultsHTML += `<p>Hand ${index + 1}: ${result.handedness}</p>`;
+            result.gestures.forEach(gesture => {
+                resultsHTML += `<p>Gesture: ${gesture.gesture} (Score: ${gesture.score.toFixed(2)})</p>`;
+            });
         });
-    });
+    }
     resultsElement.innerHTML = resultsHTML;
 }
 
