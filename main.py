@@ -31,10 +31,10 @@ def print_result(result: GestureRecognizerResult, output_image: mp.Image, timest
         handedness = result.handedness[i][0].category_name
         gestures = [{"gesture": g.category_name, "score": g.score} for g in gesture]
 
+        # Replace "ILoveYou" with "Rock"
         for gesture in gestures:
             if gesture["gesture"] == "ILoveYou":
                 gesture["gesture"] = "Rock"
-
 
         results.append({"handedness": handedness, "gestures": gestures})
 
@@ -55,8 +55,13 @@ options = GestureRecognizerOptions(
 
 # Route for the main page
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
+
+# Route for the 'signix' page
+@app.route('/signix')
+def signix():
+    return render_template('signix.html')
 
 # Background thread to process video frames
 def process_video():
