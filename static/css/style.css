@@ -8,6 +8,7 @@ body {
     width: 100vw;
     margin: 0;
     background-image: url("../images/empty-blackboard.jpg");
+    color: white;
 }
 
 .container{
