@@ -1,30 +1,33 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    background-image: url("../images/hand-drawn-flat-school-frame.jpg");
-    color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: url("../images/hand-drawn-flat-school-frame.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: inherit;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: inherit;
 }
 
 #video {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 #results {
-    text-align: center;
-    width: 30%;
+  text-align: center;
+  width: 30%;
 }
