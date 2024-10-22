@@ -3,23 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gesture Recognition</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
+    <title>SignIX - Gesture Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- 
-      improve the ui if you can
-    -->
-    <h1>SignIX</h1>
-    <div class="container">
-      <img id="video" alt="Video Feed" />
-      <div id="results"></div>
+    <header class="header">
+      <div class="container">
+        <h1 class="title">SignIX Gesture Recognition</h1>
+        <p class="description">
+          Real-time hand gesture recognition powered by AI. Get started below.
+        </p>
+      </div>
+    </header>
+
+    <div class="container video-container">
+      <div class="video-feed">
+        <img id="video" alt="Video Feed" />
+      </div>
+      <div id="results" class="results">
+        <h2>Detected Gestures</h2>
+        <ul id="gesture-list"></ul>
+      </div>
     </div>
 
-    <!-- SocketIO -->
+    <footer class="footer">
+      <p>&copy; 2024 SignIX. All rights reserved.</p>
+    </footer>
+
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>

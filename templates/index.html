@@ -3,39 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gesture Recognition</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
+    <title>SignIX - Gesture Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="title">Welcome to SignIX</h1>
+        <p class="description">
+          Discover the future of gesture recognition with <span class="highlight">SignIX</span>. Interpret hand signs in real-time using cutting-edge AI technology.
+        </p>
+        <a href="/signix" class="cta-button">Try Gesture Recognition</a>
+      </div>
+    </header>
 
-    <!-- 
-      1. Please maintain all the images in static/images
-      2. index.html is the landing page so design accordingly.
-            it should contain...
-            1. Propper info on SignIX (what is it what it does)
-            2. Currently supported gestures (listed in <ul>) 
-      3. Refrence for the landing page - https://freeapi.app/ (the style and the related elements)
-    -->
+    <section class="supported-gestures">
+      <div class="container">
+        <h2>Supported Gestures</h2>
+        <ul class="gestures-list">
+          <li>☝️ Point Up</li>
+          <li>👍 Thumb Up</li>
+          <li>👎 Thumb Down</li>
+          <li>✋ Open Palm</li>
+          <li>👊 Close Fist</li>
+          <li>✌️ Victory</li>
+          <li>🤘 Rock</li>
+        </ul>
+      </div>
+    </section>
 
-    <h1>SignIX</h1>
-    <div>
-      <p>hello bro this is the thing called signix which can tell what your hand suggests currently this supports</p>
-      <ul>
-        <li>pointup</li>
-        <li>thumbup</li>
-        <li>thumbDown</li>
-        <li>openpalm</li>
-        <li>closeFist</li>
-        <li>victory</li>
-        <li>rock</li>
-      </ul>
-      <a href="/signix">Try It</a>
-    </div>
+   
 
-    <!-- SocketIO -->
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
