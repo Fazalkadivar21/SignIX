@@ -1,4 +1,6 @@
-
+/*
+docker build -t sinigx . 
+docker run --device /dev/video0 -d -t  -p 90:5000 signix */
 * {
   margin: 0;
   padding: 0;

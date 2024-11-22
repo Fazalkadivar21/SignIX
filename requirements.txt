@@ -1,4 +1,4 @@
 opencv-python
 mediapipe
 flask
-flask_socketio
+flask-socketio
